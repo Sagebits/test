@@ -1,0 +1,88 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>sh.isaac.terminology.source</groupId>
+	<artifactId>mvx-src-data</artifactId>
+	<version>2017-08-24</version>
+	
+	<packaging>pom</packaging>
+
+	<name>Manufacturers of Vaccines Source Upload</name>
+	
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+			<comments>
+				Contributions from 2013-2017 where performed either by US government
+				employees, or under US Veterans Health Administration contracts.
+
+				US Veterans Health Administration contributions by government employees
+				are work of the U.S. Government and are not subject to copyright
+				protection in the United States. Portions contributed by government
+				employees are USGovWork (17USC §105). Not subject to copyright.
+
+				Contribution by contractors to the US Veterans Health Administration
+				during this period are contractually contributed under the
+				Apache License, Version 2.0.
+
+				See: https://www.usa.gov/government-works
+
+				Contributions prior to 2013:
+
+				Copyright © International Health Terminology Standards Development Organisation.
+
+				Content packaged by SOLOR projects are subject to licenses specific to the content packaged.
+			</comments>
+		</license>
+
+	</licenses>
+
+	<organization>
+		<name>Organizations participating in ISAAC, ISAAC's KOMET, and SOLOR development include the
+				US Veterans Health Administration, OSHERA, and the Health Services Platform Consortium.
+		</name>
+	</organization>
+	
+	<developers>
+		<developer>
+			<properties>
+				<info>For a listing of developers, clone the project and execute 'git shortlog -sn'</info>
+			</properties>
+		</developer>
+	</developers>
+	
+	<issueManagement>
+		<system>Jira</system>
+		<url>https://issues.osehra.org/projects/ISAAC/summary</url>
+	</issueManagement>
+	
+	<scm>
+		<url>https://github.com/Sagebits/test.git</url>
+		<tag>sh.isaac.terminology.source/mvx-src-data/2017-08-24</tag>
+	</scm>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>zip</id>
+						<goals>
+							<goal>attached</goal>
+						</goals>
+						<phase>package</phase>
+						<configuration>
+							<descriptors>
+								<descriptor>${basedir}/assembly.xml</descriptor>
+							</descriptors>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
